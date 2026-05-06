@@ -1,8 +1,8 @@
 {
   "name" : "Haskell Dev",
   "image" : "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "postCreateCommand" : "apt-get update && apt-get install -y ghc cabak-install && echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc && ghc --version",
-
+  "postCreateCommand" : "curl -sSl https://get-gchup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 sh && source ~/.ghcup/env && ghcup install ghc && ghcup set ghc latest",
+  
   "remoteUser" : "vscode"
-  }
+
 }
