@@ -1,8 +1,6 @@
 {
   "name" : "Haskell Dev",
   "image" : "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "postCreateCommand" : "curl -sSl https://get-gchup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 sh && source ~/.ghcup/env && ghcup install ghc && ghcup set ghc latest",
-  
+  "postCreateCommand" : "curl -sSl https://get-gchup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 sh && source ~/.ghcup/env && ghcup install ghc && ghcup set ghc latest && gchup install cabal",  
   "remoteUser" : "vscode"
-
 }
