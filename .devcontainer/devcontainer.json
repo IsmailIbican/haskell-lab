@@ -1,7 +1,8 @@
 {
   "name" : "Haskell Dev",
-  "image" : "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features" : {
-    "ghcr.io/devcontainers/features/haskell:1": {}
+  "image" : "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "postCreateCommand" : "apt-get update && apt-get install -y ghc cabak-install && echo 'export PATH=$PATH:/usr/bin' >> ~/.bashrc && ghc --version",
+
+  "remoteUser" : "vscode"
   }
 }
